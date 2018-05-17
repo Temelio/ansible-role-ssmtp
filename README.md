@@ -35,20 +35,19 @@ and use:
 $ tox
 ```
 
-## Role Variables
+### Default role variables
+
+``` yaml
 # Repository & package management
-# -----------------------------------------------------------------------------
 ssmtp_prerequisites_packages: "{{ _ssmtp_prerequisites_packages }}"
 ssmtp_repository_cache_valid_time: 3600
 ssmtp_repository_update_cache: 'True'
 
 # ssmtp user and group
-# -----------------------------------------------------------------------------
 ssmtp_user_name: 'root'
 ssmtp_group_name: 'mail'
 
 # Path management
-# -----------------------------------------------------------------------------
 ssmtp_paths:
   dirs:
     config:
@@ -66,7 +65,6 @@ ssmtp_paths:
       mode: '0640'
 
 # ssmtp config
-# -----------------------------------------------------------------------------
 ssmtp_root_recipient: 'admin@example.com'
 ssmtp_mailhub: 'mail.example.com'
 ssmtp_mailhub_port: '25'
@@ -74,10 +72,6 @@ ssmtp_from_line_override: 'YES'
 ssmtp_use_STARTTLS: 'YES'
 ssmtp_authUser: 'user@example.com'
 ssmtp_authPass: 'change me'
-
-### Default role variables
-
-``` yaml
 ```
 
 ## Dependencies
