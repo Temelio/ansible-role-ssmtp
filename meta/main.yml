@@ -1,0 +1,21 @@
+---
+
+galaxy_info:
+  author: 'Lise Machetel'
+  description: 'Install SSMTP package'
+  company: 'Temelio (http://temelio.com)'
+  license: 'MIT'
+  min_ansible_version: '2.2'
+  github_branch: 'master'
+  platforms:
+    - name: 'Ubuntu'
+      versions:
+        - 'trusty'
+        - 'xenial'
+    - name: 'Debian'
+      versions:
+        - 'jessie'
+        - 'stretch'
+  galaxy_tags:
+    - 'system'
+dependencies: []

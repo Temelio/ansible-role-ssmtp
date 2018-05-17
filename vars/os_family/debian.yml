@@ -1,0 +1,6 @@
+---
+
+# Debian OS family specific vars
+
+_ssmtp_prerequisites_packages:
+  - name: 'ssmtp'

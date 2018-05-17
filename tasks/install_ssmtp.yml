@@ -1,0 +1,13 @@
+---
+
+- name: 'INSTALL | APT | Install system prerequisites'
+  apt:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    update_cache: "{{ ssmtp_repository_update_cache }}"
+    cache_valid_time: "{{ ssmtp_repository_cache_valid_time }}"
+  with_items: "{{ ssmtp_prerequisites_packages }}"
+  tags:
+    - 'role::ssmtp'
+    - 'role::ssmtp::init'
+    - 'role::ssmtp::init::install'
