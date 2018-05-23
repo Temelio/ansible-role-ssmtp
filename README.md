@@ -1,6 +1,11 @@
 # ssmtp
 
-[![Build Status](https://travis-ci.org/Temelio/ansible-role-ssmtp.svg?branch=master)](https://travis-ci.org/Temelio/ansible-role-ssmtp)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-ssmtp/master.svg?label=travis_master)](https://travis-ci.org/Temelio/ansible-role-ssmtp)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-ssmtp/develop.svg?label=travis_develop)](https://travis-ci.org/Temelio/ansible-role-ssmtp)
+[![Updates](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/)
+[![Python 3](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/python-3-shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/)
+
+
 
 Install ssmtp package.
 
@@ -83,7 +88,7 @@ None
 ``` yaml
 - hosts: servers
   roles:
-    - { role: Temelio.ansible-role-ssmtp }
+    - { role: Temelio.ssmtp }
 ```
 
 ## License
