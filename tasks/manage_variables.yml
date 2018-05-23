@@ -39,3 +39,4 @@
 - name: 'INIT | VARIABLES | Load OS release vars file'
   include_vars: "{{ role_path }}/vars/os_distribution/{{ ansible_distribution | lower }}/{{ ansible_distribution_release | lower }}.yml"
   when: "ssmtp_check_os_release_vars.stat.exists"
+  
