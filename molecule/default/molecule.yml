@@ -1,4 +1,5 @@
 ---
+
 ansible:
   extra_vars:
     ansible_python_interpreter: '/usr/bin/env python2.7'
@@ -15,14 +16,13 @@ driver:
 lint:
   name: 'yamllint'
 platforms:
-  - name: "ssmtp-docker-jessie"
-    image: 'minimum2scp/systemd-jessie:latest'
-    command: '/sbin/init'
+  - name: "ssmtp-docker-trusty"
+    image: 'ubuntu:trusty'
     cap_add:
       - 'SYS_PTRACE'
     privileged: True
-  - name: 'statsd-docker-stretch'
-    image: 'minimum2scp/systemd-stretch'
+  - name: "ssmtp-docker-jessie"
+    image: 'minimum2scp/systemd-jessie:latest'
     command: '/sbin/init'
     cap_add:
       - 'SYS_PTRACE'
@@ -33,8 +33,9 @@ platforms:
     cap_add:
       - 'SYS_PTRACE'
     privileged: True
-  - name: "ssmtp-docker-trusty"
-    image: 'ubuntu:trusty'
+  - name: "ssmtp-docker-stretch"
+    image: 'minimum2scp/systemd-stretch'
+    command: '/sbin/init'
     cap_add:
       - 'SYS_PTRACE'
     privileged: True

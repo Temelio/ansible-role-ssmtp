@@ -1,0 +1,23 @@
+---
+
+- name: 'CONFIG | Create ssmtp configuration file'
+  template:
+    src: "{{ role_path }}/templates/ssmtp.conf.j2"
+    dest: "{{ ssmtp_paths.files.main_config.path }}"
+    owner: "{{ ssmtp_paths.files.main_config.owner | default(ssmtp_user_name) }}"
+    group: "{{ ssmtp_paths.files.main_config.group | default(ssmtp_group_name) }}"
+    mode: "{{ ssmtp_paths.files.main_config.mode | default('0640') }}"
+  tags:
+    - 'role::ssmtp'
+    - 'role::ssmtp::init'
+
+- name: 'CONFIG | Create ssmtp revaliases file'
+  template:
+    src: "{{ role_path }}/templates/revaliases.j2"
+    dest: "{{ ssmtp_paths.files.revaliases_config.path }}"
+    owner: "{{ ssmtp_paths.files.revaliases_config.owner | default(ssmtp_user_name) }}"
+    group: "{{ ssmtp_paths.files.revaliases_config.group | default(ssmtp_group_name) }}"
+    mode: "{{ ssmtp_paths.files.revaliases_config.mode | default('0640') }}"
+  tags:
+    - 'role::ssmtp'
+    - 'role::ssmtp::init'
