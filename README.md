@@ -98,5 +98,5 @@ MIT
 ## Author Information
 
 Lise Machetel (for Temelio company)
-- http://temelio.com
+- https://temelio.com
 - lise.machetel [at] temelio.com
