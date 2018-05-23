@@ -37,4 +37,3 @@ def test_paths_properties(host, item_type, path, user):
 
     assert current_item.exists
     assert current_item.user == user
-    
