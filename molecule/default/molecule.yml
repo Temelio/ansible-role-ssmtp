@@ -18,11 +18,6 @@ lint:
 platforms:
   - name: "ssmtp-docker-trusty"
     image: 'ubuntu:trusty'
-    cap_add:
-      - 'SYS_PTRACE'
-    privileged: True
-  - name: "ssmtp-docker-jessie"
-    image: 'minimum2scp/systemd-jessie:latest'
     command: '/sbin/init'
     cap_add:
       - 'SYS_PTRACE'
@@ -35,6 +30,12 @@ platforms:
     privileged: True
   - name: "ssmtp-docker-stretch"
     image: 'minimum2scp/systemd-stretch'
+    command: '/sbin/init'
+    cap_add:
+      - 'SYS_PTRACE'
+    privileged: True
+  - name: "ssmtp-docker-bionic"
+    image: 'solita/ubuntu-systemd:18.04'
     command: '/sbin/init'
     cap_add:
       - 'SYS_PTRACE'
