@@ -3,14 +3,14 @@
 # Main tasks file for ssmtp role
 
 - name: 'INIT | Manage variables to use for our target'
-  include: "{{ role_path }}/tasks/manage_variables.yml"
+  include_tasks: "{{ role_path }}/tasks/manage_variables.yml"
   tags:
     - 'role::ssmtp'
     - 'role::ssmtp::init'
 
 - name: 'INSTALL | Manage ssmtp installation tasks'
   become: True
-  include: "{{ role_path }}/tasks/install_ssmtp.yml"
+  include_tasks: "{{ role_path }}/tasks/install_ssmtp.yml"
   tags:
     - 'role::ssmtp'
     - 'role::ssmtp::init'
@@ -18,7 +18,7 @@
 
 - name: 'CONFIG | Manage ssmtp config tasks'
   become: True
-  include: "{{ role_path }}/tasks/config.yml"
+  include_tasks: "{{ role_path }}/tasks/config.yml"
   tags:
     - 'role::ssmtp'
     - 'role::ssmtp::init'
