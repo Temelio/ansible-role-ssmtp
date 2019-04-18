@@ -1,6 +1,7 @@
 ---
 
 galaxy_info:
+  role_name: 'ssmtp'
   author: 'Lise Machetel'
   description: 'Install SSMTP package'
   company: 'Temelio (http://temelio.com)'

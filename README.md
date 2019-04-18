@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/travis/Temelio/ansible-role-ssmtp/develop.svg?label=travis_develop)](https://travis-ci.org/Temelio/ansible-role-ssmtp)
 [![Updates](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/)
 [![Python 3](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/python-3-shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-ssmtp/)
-[![Ansible Role](https://img.shields.io/ansible/role/11378.svg)](https://galaxy.ansible.com/Temelio/ssmtp/)
+[![Ansible Role](https://img.shields.io/ansible/role/25683.svg)](https://galaxy.ansible.com/Temelio/ssmtp/)
 [![GitHub tag](https://img.shields.io/github/tag/temelio/ansible-role-ssmtp.svg)](https://github.com/Temelio/ansible-role-ssmtp/tags)
 
 
