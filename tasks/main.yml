@@ -9,16 +9,20 @@
     - 'role::ssmtp::init'
 
 - name: 'INSTALL | Manage ssmtp installation tasks'
-  become: True
-  include_tasks: "{{ role_path }}/tasks/install_ssmtp.yml"
+  include_tasks:
+    file: "{{ role_path }}/tasks/install_ssmtp.yml"
+    apply:
+      become: True
   tags:
     - 'role::ssmtp'
     - 'role::ssmtp::init'
     - 'role::ssmtp::install'
 
 - name: 'CONFIG | Manage ssmtp config tasks'
-  become: True
-  include_tasks: "{{ role_path }}/tasks/config.yml"
+  include_tasks:
+    file: "{{ role_path }}/tasks/config.yml"
+    apply:
+      become: True
   tags:
     - 'role::ssmtp'
     - 'role::ssmtp::init'
